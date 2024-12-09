@@ -1,0 +1,405 @@
+/* Evresel Seçici */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* NavBar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding: 15px 25px;
+    display: flex;
+}
+
+.nav-links a:hover {
+    background-color: gray;
+    color: white;
+}
+
+/* NavBar Drop Down */
+.dropbtn {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F9F9F9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: #000;
+    background-color: #aaa;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Search Button */
+.navbar .search {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 15px 25px;
+    display: flex;
+}
+
+.navbar .search:hover {
+    background-color: red;
+}
+
+/* Section 1 */
+.section1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/la.jpg) no-repeat center center/cover;
+}
+
+.section1-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.section1-icerik {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.section1-icerik h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section1-icerik p {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Section 2 */
+.section2 {
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: #000 solid 1px;
+}
+
+.section2 h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section2 h2 {
+    font-size: 20px;
+    font-weight: normal;
+    color: grey;
+    margin-bottom: 30px;
+}
+
+.section2 p {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.member {
+    text-align: center;
+}
+
+.member img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.member h3 {
+    font-size: 18px;
+    margin: 10px 0 0 0;
+}
+
+/* Section 3 */
+.section3 {
+    background-color: #000;
+    padding: 20px 0 80px 0;
+}
+
+.section3 .tour-baslik {
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px 0 10px;
+    font-weight: 200;
+}
+
+.section3 .tour-yazi {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-style: italic;
+    color: #ccc;
+}
+
+/* Ay Listesi */
+.section3 .month-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 30px;
+    max-width: 940px;
+}
+
+.section3 .month-item {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: #000 solid 1px;
+}
+
+.section3 .durum {
+    padding: 2px 4px;
+    background-color: #f44336;
+    color: #fff;
+    margin: 0 0 0 20px;
+}
+
+.section3 .month-item-kasim {
+    justify-content: space-between;
+    display: flex;
+    padding-left: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: #000 solid 1px;
+}
+
+.section3 .Kasim-Durum {
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+
+
+/* Kart Konteyneri */
+.section3 .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* Kart */
+.section3 .card {
+    background-color: #fff;
+    border: 1px solid #444;
+    width: 300px;
+    text-align: left;
+    color: #fff;
+}
+
+.section3 .card-image {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.section3 .card-baslik {
+    color: #000;
+    padding: 0px 0 0 10px;
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.section3 .card-tarih {
+    padding: 0px 0 0 10px;
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.section3 .card-acikla {
+    color: #000;
+    padding: 0px 0 0 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Buton */
+.section3 button {
+    margin: 0 0 10px 15px;
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.section3 button:hover {
+    background-color: #777;
+    color: #000;
+}
+
+/* Section 4 */
+.section4 {
+    padding: 50px 20px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+}
+
+.section4 .contact-baslik {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section4 .contact-yanbaslik {
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.section4 .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section4 .contact-info {
+    flex: 1 1 300px;
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.section4 .icon {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.section4 .contact-form {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section4 .form-group {
+    display: flex;
+    gap: 10px;
+}
+
+.section4 input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.section4 textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    height: 40px;
+    resize: none;
+}
+
+.section4 button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.section4 .form-button:hover {
+    background-color: #444;
+}
+/* Section 5 */
+.section5{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5) url(../img/map.jpg) no-repeat center center/cover;
+}
+.section5 .photo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-size: cover;
+}
+footer{
+    text-align: center;
+    background-color: #eee;
+    padding: 100px 50px;
+}
